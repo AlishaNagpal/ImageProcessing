@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { View, FlatList, Image, Text, TouchableOpacity, NativeModules } from 'react-native';
 import styles from "./styles";
-console.disableYellowBox = true
-const {ImageFilter} = NativeModules
-
+// console.disableYellowBox = true
+// const {RNImageFilter} = NativeModules
 export default class ApplyFilter extends Component {
     constructor(props) {
         super(props);
@@ -14,7 +13,7 @@ export default class ApplyFilter extends Component {
         };
     }
 
-    imageFillter = async (num) => {
+    imageFilter = async (num) => {
         let result = await new Promise((resolve, reject) => {
             NativeModules.RNImageFilter.getSourceImage({
                 imageSource: this.state.imageUrl,
@@ -28,6 +27,7 @@ export default class ApplyFilter extends Component {
     }
 
     applyFilter = async (num) => {
+        
         this.setState({
             changedURL: ''
         })
@@ -37,9 +37,9 @@ export default class ApplyFilter extends Component {
                 changeImage: true
             })
         } else {
-            let data = await this.imageFillter(num);
+            let data = await this.imageFilter(num);
             this.setState({
-                changedURL: data,
+                changedURL: Platform.OS === 'ios' ? data : "file://" + data,
                 changeImage: true
             })
         }
@@ -49,25 +49,25 @@ export default class ApplyFilter extends Component {
         const { item } = rowDATA
         return (
             <View style={styles.flatlistView} >
-                <TouchableOpacity activeOpacity={1} onPress={() => this.applyFilter(item.case)} >
+                <TouchableOpacity onPress={() => this.applyFilter(item.case)} >
                     <Text style={styles.text}>{item.name}</Text>
                 </TouchableOpacity>
             </View>
         )
     }
 
-    toast=()=>{
-        Platform.OS === 'ios' 
-        ? null
-        : ImageFilter.show('Awesome');
-      }
+    // toast=()=>{
+    //     Platform.OS === 'ios' 
+    //     ? null
+    //     : ImageFilter.show('Awesome');
+    //   }
 
     render() {
         return (
             <View style={styles.container} >
-                <TouchableOpacity onPress={this.toast}>
+                {/* <TouchableOpacity onPress={this.toast}>
                     <Text>Show</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <Image
                     source={{ uri: this.state.changeImage ? this.state.changedURL : this.state.imageUrl }}
                     style={styles.imageStyle}

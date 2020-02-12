@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
         width: 400,
         borderRadius: 30,
         alignSelf: 'center',
-        marginTop: 100
+        marginTop: 50
     },
     flatlistView:{
         margin: 40,
         alignItems: 'center',
-        marginTop:120
+        // marginTop:120
 
     },
     text:{

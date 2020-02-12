@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Android.mk",
+    "/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "NativeImageProcessor-release-x86": {
+      "buildCommand": "/Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/lib /Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/obj/local/x86/libNativeImageProcessor.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "NativeImageProcessor",
+      "files": [
+        {
+          "src": "/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni/NativeImageProcessor.cpp",
+          "flags": "-target i686-none-linux-android16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fPIC -O2 -DNDEBUG -Isrc/debug/jni -Isrc/main/jni -I/Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/sources/cxx-stl/llvm-libc++/include -I/Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/sources/cxx-stl/llvm-libc++abi/include -I/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/src/main/jni -frtti -fexceptions -DANDROID -DANDROID -nostdinc++ -Wformat -Werror\u003dformat-security -mstackrealign -fno-strict-aliasing"
+        }
+      ],
+      "output": "/Users/appinventiv/Desktop/ImageProcessing/android/photofilterssdk/build/intermediates/ndkBuild/release/obj/local/x86/libNativeImageProcessor.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cppCompilerExecutable": "/Users/appinventiv/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
