@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ImageProcessingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ImageProcessingTests.m */; };
+		0C303E1B23F2A165004C3476 /* imageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C303E1A23F2A165004C3476 /* imageFilter.swift */; };
+		0C303E1D23F2A19E004C3476 /* imageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C303E1C23F2A19E004C3476 /* imageFilter.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -44,6 +46,9 @@
 		00E356EE1AD99517003FC87E /* ImageProcessingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageProcessingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ImageProcessingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingTests.m; sourceTree = "<group>"; };
+		0C303E1923F2A164004C3476 /* ImageProcessing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageProcessing-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C303E1A23F2A165004C3476 /* imageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFilter.swift; sourceTree = "<group>"; };
+		0C303E1C23F2A19E004C3476 /* imageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageFilter.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageProcessing/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageProcessing/AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +127,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C303E1823F2A10D004C3476 /* ImageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				0C303E1A23F2A165004C3476 /* imageFilter.swift */,
+				0C303E1C23F2A19E004C3476 /* imageFilter.m */,
+				0C303E1923F2A164004C3476 /* ImageProcessing-Bridging-Header.h */,
+			);
+			name = ImageFilter;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +147,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0C303E1823F2A10D004C3476 /* ImageFilter */,
 			);
 			name = ImageProcessing;
 			sourceTree = "<group>";
@@ -194,7 +210,6 @@
 				512ECED3CBC977F37A1FFF0E /* Pods-ImageProcessingTests.debug.xcconfig */,
 				8BBBEBAA7C76112836E22D60 /* Pods-ImageProcessingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +245,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				6D003D53D08023A39054BEA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +308,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1100;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +327,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -386,6 +406,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		6D003D53D08023A39054BEA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
+				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		8C8D501A9347BA9A7361891F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -529,6 +569,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0C303E1D23F2A19E004C3476 /* imageFilter.m in Sources */,
+				0C303E1B23F2A165004C3476 /* imageFilter.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 512ECED3CBC977F37A1FFF0E /* Pods-ImageProcessingTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BBBEBAA7C76112836E22D60 /* Pods-ImageProcessingTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ImageProcessingTests/Info.plist;
@@ -626,6 +670,7 @@
 			baseConfigurationReference = EECB503F477C72707B5B1582 /* Pods-ImageProcessing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = ImageProcessing/Info.plist;
@@ -637,6 +682,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ImageProcessing;
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageProcessing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +694,7 @@
 			baseConfigurationReference = 90847F244500AF96B58ADEDF /* Pods-ImageProcessing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = ImageProcessing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +705,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ImageProcessing;
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageProcessing-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
